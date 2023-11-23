@@ -1,0 +1,27 @@
+Setting a Card for a Specific Emulator Core 
+
+(/set~ info.setting!mem_map@[MirrorOS]{mem: mem_card_2}{password7392})
+(/set~ info.setting!password7392: [FLASH_EMU_PSP])
+(/start.command~ if {req: load = mem_card_2}: [/run~ action!input@(MirrorOS){password7392}])
+(/start.command~ password7392-entered: [/run~ action!open@(MirrrorOS){RetroArch}])
+(/start.command~ if {req: open = RetroArch}: [/set~ info.setting!core@(RetroArch){PPSSPP}])
+
+Loading a Game with a Core
+
+(/set~ info.setting!mem_map@[MirrorOS]{mem: mem_card_02}{password7392})
+(/set~ info.setting!password7392: [EMU_GBA_MET])
+(/start.command~ if {req: load = mem_card_02}: [/run~ action!input@(MirrorOS){password7392}])
+(/start.command~ password7392-entered: [/run~ action!open@(MirrorOS){RetroArch}])
+(/start.command~ password7392-entered: [/set~ info.setting!core@(RetroArch){M-VBA}])
+(/start.command~ if {req: load = mem_card_02}: [/run~ action!open@(RetroArch){MetFus.gba}])
+
+Overwriting a Memory Card
+
+(/set~ info.setting!overwrite@[MirrorOS]{mem: mem_card_02})
+(/set~ info.setting!mem_map@[MirrorOS]{mem: mem_card_02}{password4821})
+(/set~ info.setting!password4821: [EMU_NES_SMB])
+(/start.command~ if {req: load = mem_card_02}: [/run~ action!input@(MirrorOS){password4821}])
+(/start.command~ password4821-entered: [/run~ action!open@(MirrorOS){RetroArch}])
+(/start.command~ password4821-entered: [/set~ info.setting!core@(RetroArch){FCEUX}])
+(/start.command~ if {req: load = mem_card_02}: [/run~ action!open@(RetroArch){SMB_NES.gba}])
+
