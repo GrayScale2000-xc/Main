@@ -1,7 +1,7 @@
 sup, i'm GrayScale.
 
 interested in coding,
-currently working on c.ai custom syntax,
+works on c.ai custom syntax [GX12],
 willing to do any development.
 
 makes a text-based OS called MirrorOS 
@@ -10,4 +10,4 @@ makes a text-based OS called MirrorOS
 owns a yt, makes music in spare time
 (same name but without -xc afterwards)
 
-reach me by discord or whatever.
+reach me by whatever.
